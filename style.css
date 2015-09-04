@@ -1,0 +1,277 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+body{
+    background-color:black;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #333333;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    background-color:black;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+#content h2 {
+    color:white;
+}
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+.sidebar-nav li div {
+    width:180px;
+    float:left;
+    color:white;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+    float:left;
+    text-indent: 0px; 
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: white;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.server-box{
+    background-color:black;
+    width:180px;
+    height: 160px;
+    float:left;
+    position: relative;
+    z-index: 10;
+}
+
+.server-box:after {
+    background-color: #333333;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index:-1;
+}
+
+.container{
+    font-size:20px;
+    margin-top: 3px;
+    width:155px;
+    height: 71px;
+    color:white;
+    text-align: center;
+}
+
+.btn-circle {
+    text-align: center;
+    line-height: 1.428571429;
+    background-color: transparent;
+}
+
+.btn-circle-small {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.btn-circle-big{
+    width: 40px;
+    height: 40px;
+    padding: 9px 0;
+    font-size: 14px;
+    border-radius: 21px;
+}
+
+.server-button {
+    float:left;
+    width:80px !important;
+    font-size: 12px;
+}
+#available-apps{
+    color:grey;
+    font-size:12px;
+}
+
+.server-button-link{
+    margin-left: 30px;
+}
+
+#first-server-button{
+    margin-left:25px;
+}
+
+.time{
+    color:black;
+    font-size:12px;
+}
+
+.badge{
+    opacity:0;
+}
+
+.server-box:hover .badge{
+    opacity:1;
+}
+
+.Hadoop {
+    background: #f7cff1;
+    background: -moz-linear-gradient(-45deg,  #f7cff1 0%, #e773d7 0%, #d60abb 50%, #e153ce 100%, #ea88dd 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f7cff1), color-stop(0%,#e773d7), color-stop(50%,#d60abb), color-stop(100%,#e153ce), color-stop(100%,#ea88dd));
+    background: -webkit-linear-gradient(-45deg,  #f7cff1 0%,#e773d7 0%,#d60abb 50%,#e153ce 100%,#ea88dd 100%);
+    background: -o-linear-gradient(-45deg,  #f7cff1 0%,#e773d7 0%,#d60abb 50%,#e153ce 100%,#ea88dd 100%);
+    background: -ms-linear-gradient(-45deg,  #f7cff1 0%,#e773d7 0%,#d60abb 50%,#e153ce 100%,#ea88dd 100%);
+    background: linear-gradient(135deg,  #f7cff1 0%,#e773d7 0%,#d60abb 50%,#e153ce 100%,#ea88dd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7cff1', endColorstr='#ea88dd',GradientType=1 );
+}
+
+.Rails {
+    background: #e0cff7;
+    background: -moz-linear-gradient(-45deg,  #e0cff7 0%, #a373e7 0%, #5f0ad6 50%, #8e53e1 100%, #b188ea 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#e0cff7), color-stop(0%,#a373e7), color-stop(50%,#5f0ad6), color-stop(100%,#8e53e1), color-stop(100%,#b188ea));
+    background: -webkit-linear-gradient(-45deg,  #e0cff7 0%,#a373e7 0%,#5f0ad6 50%,#8e53e1 100%,#b188ea 100%);
+    background: -o-linear-gradient(-45deg,  #e0cff7 0%,#a373e7 0%,#5f0ad6 50%,#8e53e1 100%,#b188ea 100%);
+    background: -ms-linear-gradient(-45deg,  #e0cff7 0%,#a373e7 0%,#5f0ad6 50%,#8e53e1 100%,#b188ea 100%);
+    background: linear-gradient(135deg,  #e0cff7 0%,#a373e7 0%,#5f0ad6 50%,#8e53e1 100%,#b188ea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0cff7', endColorstr='#b188ea',GradientType=1 );
+}
+
+.Chronos {
+    background: #cfecf7;
+    background: -moz-linear-gradient(-45deg,  #cfecf7 0%, #73cae7 0%, #0aa3d6 50%, #53bde1 100%, #88d2ea 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#cfecf7), color-stop(0%,#73cae7), color-stop(50%,#0aa3d6), color-stop(100%,#53bde1), color-stop(100%,#88d2ea));
+    background: -webkit-linear-gradient(-45deg,  #cfecf7 0%,#73cae7 0%,#0aa3d6 50%,#53bde1 100%,#88d2ea 100%);
+    background: -o-linear-gradient(-45deg,  #cfecf7 0%,#73cae7 0%,#0aa3d6 50%,#53bde1 100%,#88d2ea 100%);
+    background: -ms-linear-gradient(-45deg,  #cfecf7 0%,#73cae7 0%,#0aa3d6 50%,#53bde1 100%,#88d2ea 100%);
+    background: linear-gradient(135deg,  #cfecf7 0%,#73cae7 0%,#0aa3d6 50%,#53bde1 100%,#88d2ea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfecf7', endColorstr='#88d2ea',GradientType=1 );
+}
+
+.Storm {
+    background: #cff7ea;
+    background: -moz-linear-gradient(-45deg,  #cff7ea 0%, #73e7be 0%, #0ad68f 50%, #53e1af 100%, #88eac8 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#cff7ea), color-stop(0%,#73e7be), color-stop(50%,#0ad68f), color-stop(100%,#53e1af), color-stop(100%,#88eac8));
+    background: -webkit-linear-gradient(-45deg,  #cff7ea 0%,#73e7be 0%,#0ad68f 50%,#53e1af 100%,#88eac8 100%);
+    background: -o-linear-gradient(-45deg,  #cff7ea 0%,#73e7be 0%,#0ad68f 50%,#53e1af 100%,#88eac8 100%);
+    background: -ms-linear-gradient(-45deg,  #cff7ea 0%,#73e7be 0%,#0ad68f 50%,#53e1af 100%,#88eac8 100%);
+    background: linear-gradient(135deg,  #cff7ea 0%,#73e7be 0%,#0ad68f 50%,#53e1af 100%,#88eac8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cff7ea', endColorstr='#88eac8',GradientType=1 );
+}
+
+.Spark {
+    background: #daf7cf;
+    background: -moz-linear-gradient(-45deg,  #daf7cf 0%, #94e773 0%, #44d60a 50%, #7be153 100%, #a4ea88 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#daf7cf), color-stop(0%,#94e773), color-stop(50%,#44d60a), color-stop(100%,#7be153), color-stop(100%,#a4ea88));
+    background: -webkit-linear-gradient(-45deg,  #daf7cf 0%,#94e773 0%,#44d60a 50%,#7be153 100%,#a4ea88 100%);
+    background: -o-linear-gradient(-45deg,  #daf7cf 0%,#94e773 0%,#44d60a 50%,#7be153 100%,#a4ea88 100%);
+    background: -ms-linear-gradient(-45deg,  #daf7cf 0%,#94e773 0%,#44d60a 50%,#7be153 100%,#a4ea88 100%);
+    background: linear-gradient(135deg,  #daf7cf 0%,#94e773 0%,#44d60a 50%,#7be153 100%,#a4ea88 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#daf7cf', endColorstr='#a4ea88',GradientType=1 );
+}

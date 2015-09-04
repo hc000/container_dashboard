@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li><div>&nbsp;</div></li>
+        <li class="sidebar-brand">
+
+          <div id="first-server-button"class="server-button">
+          <a href="#" class="btn btn-default btn-circle btn-circle-big server-button-link" onclick="App.addServer()" ><span class="glyphicon glyphicon-plus"></span></a><div>Add Server</div>
+            </div>
+
+            <div class="server-button">
+          <a href="#" class="btn btn-default btn-circle btn-circle-big server-button-link" onclick="App.destroyServer()" ><span class="glyphicon glyphicon-minus"></span></a><div>Destroy</div>
+            </div>
+
+        </li>
+        <li><div>&nbsp;</div></li>
+        <li><div>&nbsp;</div></li>
+        <li><div>&nbsp;</div></li>
+        <li><div id="available-apps">Available Apps</div></li>
+        <li>
+          <div class="">Hadoop</div>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.removeContainer('Hadoop')" ><span class="glyphicon glyphicon-minus"></span></a>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.simulateDelay('Hadoop')"><span class="glyphicon glyphicon-plus"></span></a>
+        </li>
+        <li>
+          <div href="#">Rails</div>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.removeContainer('Rails')" ><span class="glyphicon glyphicon-minus"></span></a>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.simulateDelay('Rails')"><span class="glyphicon glyphicon-plus"></span></a>
+        </li>
+        <li>
+          <div href="#">Chronos</div>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.removeContainer('Chronos')" ><span class="glyphicon glyphicon-minus"></span></a>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.simulateDelay('Chronos')"><span class="glyphicon glyphicon-plus"></span></a>
+        </li>
+        <li>
+          <div href="#">Storm</div>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.removeContainer('Storm')" ><span class="glyphicon glyphicon-minus"></span></a>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.simulateDelay('Storm')"><span class="glyphicon glyphicon-plus"></span></a>
+        </li>
+        <li>
+          <div href="#">Spark</div>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.removeContainer('Spark')" ><span class="glyphicon glyphicon-minus"></span></a>
+            <a href="#" class="btn btn-default btn-circle btn-circle-small" onclick="App.simulateDelay('Spark')"><span class="glyphicon glyphicon-plus"></span></a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="content" >
+            <h2>Server Canvas</h2>
+            <div id="servers" class="col-lg-12">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Error</h4>
+        </div>
+        <div class="modal-body">
+          <p>No server available, please add more server.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
